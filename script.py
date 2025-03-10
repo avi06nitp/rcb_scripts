@@ -22,14 +22,13 @@ chrome_options.binary_location = "/usr/bin/google-chrome"  # ✅ Tell Selenium w
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
-# Example usage
+
 driver.get("https://www.google.com")
 print("Title:", driver.title)
 
 time.sleep(2)
 driver.quit()
 
-# ✅ Email Configuration (Use App Password, Not Real Password)
 EMAIL = "avinash06nitp@gmail.com"
 PASSWORD = "xetr xdko hmiw lrui"  # Use an App Password, NOT your actual password
 TO_EMAILS = ["avinash.singh3@phonepe.com", "avinashsinghmindhunter@gmail.com"]  # Add more TO recipients
@@ -37,11 +36,9 @@ CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "avinashs.ug19.ce@nitp.ac.in"]
 
 def send_email():
     subject = "Royal Challengers Bangalore Tickets Available!"
-    body = "RCB Tickets are LIVE! 🎉 Don't miss the thrill of watching the game unfold right in front of your eyes. Book your tickets now: https://shop.royalchallengers.com/ticket Secure your seats before they’re gone! See you at the stadium! Cheers,Avinash"
+    body = "RCB Tickets are LIVE! Don't miss the thrill of watching the game unfold right in front of your eyes. Book your tickets now: https://shop.royalchallengers.com/ticket Secure your seats before they’re gone! See you at the stadium! Cheers,Avinash"
     
     message = f"Subject: {subject}\n\n{body}"
-
-
     recipients = TO_EMAILS + CC_EMAILS
     
     try:
@@ -76,6 +73,5 @@ def check_tickets():
     
     driver.quit()
 
-# ✅ Run script once (Railway Cron Job will handle scheduling)
 if __name__ == "__main__":
     check_tickets()
