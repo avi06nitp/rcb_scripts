@@ -32,18 +32,20 @@ driver.quit()
 # ✅ Email Configuration (Use App Password, Not Real Password)
 EMAIL = "avinash06nitp@gmail.com"
 PASSWORD = "xetr xdko hmiw lrui"  # Use an App Password, NOT your actual password
-TO_EMAIL = "avinash.singh3@phonepe.com"
+TO_EMAILS = ["avinash.singh3@phonepe.com", "avinashsinghmindhunter@gmail.com"]  # Add more TO recipients
+CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "avinashs.ugh19.ce@nitp.ac.in"] 
 
 def send_email():
     subject = "RCB Tickets Available!"
-    body = "The Buy Now button is live! Visit https://shop.royalchallengers.com/ticket to book your tickets."
+    body = "RCB Tickets are available Now! Visit https://shop.royalchallengers.com/ticket to book your tickets. Thanks me later"
     message = f"Subject: {subject}\n\n{body}"
+    recipients = TO_EMAILS + CC_EMAILS
     
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(EMAIL, PASSWORD)
-            server.sendmail(EMAIL, TO_EMAIL, message)
+            server.sendmail(EMAIL, recipients, message)
         print("✅ Email sent successfully!")
     except Exception as e:
         print("❌ Error sending email:", e)
@@ -60,7 +62,7 @@ def check_tickets():
     time.sleep(5)
 
     try:
-        buy_now_buttons = driver.find_elements(By.XPATH, "//button[contains(text(), 'COMING SOON')]")
+        buy_now_buttons = driver.find_elements(By.XPATH, "//button[contains(translate(text(), 'BUY NOWTICKETS', 'buy nowtickets'), 'buy')]")
         if buy_now_buttons:
             print("🎟️ Buy Now button found! Sending email...")
             send_email()
