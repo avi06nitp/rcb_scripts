@@ -37,18 +37,7 @@ CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "avinashs.ug19.ce@nitp.ac.in"]
 
 def send_email():
     subject = "Royal Challengers Bangalore Tickets Available!"
-    body = """Hey Cricket Fans,
-    
-    RCB Tickets are LIVE! 🎉 Don't miss the thrill of watching the game unfold right in front of your eyes.
-    
-    Book your tickets now: https://shop.royalchallengers.com/ticket
-    
-    As someone who’s always ahead of the game, I had to share this with you. Secure your seats before they’re gone!
-    
-    See you at the stadium! 🚀🏏
-    
-    Cheers,  
-    Avinash"""
+    body = "RCB Tickets are LIVE! 🎉 Don't miss the thrill of watching the game unfold right in front of your eyes. Book your tickets now: https://shop.royalchallengers.com/ticket Secure your seats before they’re gone! See you at the stadium! Cheers,Avinash"
     
     message = f"Subject: {subject}\n\n{body}"
 
