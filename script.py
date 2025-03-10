@@ -36,37 +36,23 @@ TO_EMAILS = ["avinash.singh3@phonepe.com", "avinashsinghmindhunter@gmail.com"]  
 CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "avinashs.ug19.ce@nitp.ac.in"] 
 
 def send_email():
-    subject = "Royal Challengers Bengaluru IPL Tickets Available!"
+    subject = "Royal Challengers Bangalore Tickets Available!"
+    body = """Hey Cricket Fans,
     
-    body = """\
-    <html>
-    <head>
-        <title>RCB Tickets Available!</title>
-    </head>
-    <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-        <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-            <h2 style="color: #e31837; text-align: center;">🔥 RCB Tickets Available – Grab Yours Now! 🎟️</h2>
-            
-            <p>Hey <strong>Cricket Fan,</strong></p>
+    RCB Tickets are LIVE! 🎉 Don't miss the thrill of watching the game unfold right in front of your eyes.
+    
+    Book your tickets now: https://shop.royalchallengers.com/ticket
+    
+    As someone who’s always ahead of the game, I had to share this with you. Secure your seats before they’re gone!
+    
+    See you at the stadium! 🚀🏏
+    
+    Cheers,  
+    Avinash"""
+    
+    message = f"Subject: {subject}\n\n{body}"
 
-            <p>Big news! <strong>RCB tickets are LIVE! 🎉</strong> Don’t miss the electrifying experience of watching the game live in the stadium.</p>
 
-            <p style="text-align: center; font-size: 18px;">
-                👉 <a href="https://shop.royalchallengers.com/ticket" target="_blank" style="color: #e31837; text-decoration: none; font-weight: bold;">
-                    Book Your Tickets Now!
-                </a>
-            </p>
-
-            <p style="text-align: center;">Hurry! seats are filling fast. Thank me later 😉</p>
-
-            <p>Cheers,</p>
-            <p><strong>Avinash Singh</strong></p>
-        </div>
-    </body>
-    </html>
-    """
-
-    message = f"Subject: {subject}\nMIME-Version: 1.0\nContent-Type: text/html\n\n{body}"
     recipients = TO_EMAILS + CC_EMAILS
     
     try:
