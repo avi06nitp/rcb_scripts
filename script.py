@@ -36,19 +36,18 @@ CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "avinashs.ug19.ce@nitp.ac.in"]
 
 def send_email():
     subject = "Royal Challengers Bangalore Tickets Available!"
-    body = "RCB Tickets are LIVE! Don't miss the thrill of watching the game unfold right in front of your eyes. Book your tickets now: https://shop.royalchallengers.com/ticket Secure your seats before they’re gone! See you at the stadium! Cheers,Avinash"
+    body = "RCB Tickets are LIVE! Don't miss the thrill of watching the game unfold right in front of your eyes. Book your tickets now: https://shop.royalchallengers.com/ticket Secure your seats before they’re gone! See you at the stadium! Cheers, Avinash"
     
     message = f"Subject: {subject}\n\n{body}"
-    recipients = TO_EMAILS + CC_EMAILS
     
-    try:
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
-            server.starttls()
-            server.login(EMAIL, PASSWORD)
-            server.sendmail(EMAIL, recipients, message)
-        print("✅ Email sent successfully!")
-    except Exception as e:
-        print("❌ Error sending email:", e)
+    recipients = TO_EMAILS + CC_EMAILS
+
+    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        server.starttls()
+        server.login(EMAIL, PASSWORD)
+        server.sendmail(EMAIL, recipients, message)
+
+    print("✅ Email sent successfully!")
 
 def check_tickets():
     chrome_options = Options()
