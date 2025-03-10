@@ -36,7 +36,7 @@ TO_EMAILS = ["avinash.singh3@phonepe.com", "avinashsinghmindhunter@gmail.com"]  
 CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "avinashs.ug19.ce@nitp.ac.in"] 
 
 def send_email():
-    subject = "RCB Tickets Available!"
+    subject = "Royal Challengers Bengaluru IPL Tickets Available!"
     
     body = """\
     <html>
