@@ -32,7 +32,7 @@ driver.quit()
 EMAIL = "avinash06nitp@gmail.com"
 PASSWORD = "xetr xdko hmiw lrui"  # Use an App Password, NOT your actual password
 TO_EMAILS = ["avinash.singh3@phonepe.com", "avinashsinghmindhunter@gmail.com"]  # Add more TO recipients
-CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "avinashs.ug19.ce@nitp.ac.in","dhritisood19@gmail.com","tanushreepathak@gmail.com"] 
+CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "avinashs.ug19.ce@nitp.ac.in","dhritisood19@gmail.com","tanushreepathak@gmail.com","hardikdua08@gmail.com"] 
 
 def send_email():
     subject = "Royal Challengers Bangalore Tickets Available!"
