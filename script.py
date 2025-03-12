@@ -61,7 +61,7 @@ def check_tickets():
     time.sleep(5)
 
     try:
-        buy_now_buttons = driver.find_elements(By.XPATH, "//button[contains(translate(text(), 'BUY NOWTICKETS', 'buy nowtickets'), 'UPCOMING')]")
+        buy_now_buttons = driver.find_elements(By.XPATH, "//button[contains(translate(text(), 'BUY NOWTICKETS', 'buy nowtickets'), 'buy')]")
         if buy_now_buttons:
             print("🎟️ Buy Now button found! Sending email...")
             send_email()
