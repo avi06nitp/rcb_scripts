@@ -49,6 +49,7 @@ def send_email():
 
     print("✅ Email sent successfully!")
 
+
 def check_tickets():
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -57,16 +58,21 @@ def check_tickets():
     chrome_options.binary_location = "/usr/bin/google-chrome"  # ✅ Use installed Chrome
 
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
-    driver.get("https://shop.royalchallengers.com/ticket")
-    time.sleep(5)
-
+    
     try:
-        buy_now_buttons = driver.find_elements(By.XPATH, "//button[normalize-space(text())='COMING']")
-        if buy_now_buttons:
-            print("🎟️ Buy Now button found! Sending email...")
+        driver.get("https://shop.royalchallengers.com/ticket")
+        time.sleep(5)  # Wait for page to fully load
+
+        # Get the entire page text
+        page_text = driver.find_element(By.TAG_NAME, "body").text  
+
+        # Check for exact case-sensitive "BUY"
+        if "BUY" in page_text:
+            print("🎟️ 'BUY' is present on the page! Sending email...")
             send_email()
         else:
-            print("⏳ Buy Now button not found yet.")
+            print("⏳ 'BUY' not found anywhere on the page.")
+
     except Exception as e:
         print("❌ Error:", e)
     
