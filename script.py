@@ -35,7 +35,7 @@ TO_EMAILS = ["avinashsinghmindhunter@gmail.com"]  # Add more TO recipients
 CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "dhritisood19@gmail.com","tanushreepathak@gmail.com","hardikdua08@gmail.com"] 
 
 def send_email():
-    subject = "Royal Challengers Bangalore Tickets Available!"
+    subject = "RCB vs CSK Tickets Available!"
     body = "RCB VS CSK Tickets are LIVE! Do not miss the thrill of watching the game unfold right in front of your eyes. Book your tickets now: https://shop.royalchallengers.com/ticket Secure your seats before they are gone! See you at the stadium! Cheers, Avinash"
     
     message = f"Subject: {subject}\n\n{body}"
