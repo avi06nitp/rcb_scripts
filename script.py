@@ -67,7 +67,7 @@ def check_tickets():
         page_text = driver.find_element(By.TAG_NAME, "body").text  
 
         # Check for exact case-sensitive "BUY"
-        if "BUY" in page_text:
+        if "Chennai" in page_text:
             print("🎟️ 'BUY' is present on the page! Sending email...")
             send_email()
         else:
