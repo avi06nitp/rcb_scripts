@@ -36,7 +36,7 @@ CC_EMAILS = ["krishnakant.alcheringa@gmail.com", "dhritisood19@gmail.com","tanus
 
 def send_email():
     subject = "Royal Challengers Bangalore Tickets Available!"
-    body = "RCB Tickets are LIVE! Do not miss the thrill of watching the game unfold right in front of your eyes. Book your tickets now: https://shop.royalchallengers.com/ticket Secure your seats before they are gone! See you at the stadium! Cheers, Avinash"
+    body = "RCB VS CSK Tickets are LIVE! Do not miss the thrill of watching the game unfold right in front of your eyes. Book your tickets now: https://shop.royalchallengers.com/ticket Secure your seats before they are gone! See you at the stadium! Cheers, Avinash"
     
     message = f"Subject: {subject}\n\n{body}"
     
